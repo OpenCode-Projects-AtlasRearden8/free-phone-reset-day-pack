@@ -1,0 +1,323 @@
+@page {
+    size: Letter;
+    margin: 16mm 15mm 20mm;
+    @bottom-left {
+        content: "Phone Reset Day Pack";
+        font-family: "Asap", sans-serif;
+        font-size: 7.5pt;
+        color: #8a8177;
+    }
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: "Asap", sans-serif;
+        font-size: 7.5pt;
+        color: #8a8177;
+    }
+}
+
+html {
+    font-size: 10pt;
+}
+
+body {
+    font-family: "Asap", sans-serif;
+    color: #33291f;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.kicker {
+    font-size: 8pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8a6d3b;
+    margin: 0 0 2mm;
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    font-size: 22pt;
+    line-height: 1.1;
+    margin: 0 0 2mm;
+    color: #2c2118;
+}
+
+h2 {
+    font-family: "Fraunces", serif;
+    font-size: 12.5pt;
+    margin: 6mm 0 2.5mm;
+    padding-bottom: 1mm;
+    border-bottom: 1.5px solid #d8c9ae;
+    color: #2c2118;
+}
+
+h3 {
+    font-family: "Asap", sans-serif;
+    font-size: 10.5pt;
+    margin: 4mm 0 1.5mm;
+    color: #7a4c1f;
+}
+
+p {
+    margin: 0 0 2.5mm;
+}
+
+.promise {
+    font-size: 10.5pt;
+    color: #5c4f40;
+    margin: 0 0 4mm;
+}
+
+.pacing {
+    background: #fbf3e4;
+    border: 1.5px solid #e5d3ae;
+    border-left: 5mm solid #c9973f;
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    margin: 0 0 5mm;
+    break-inside: avoid;
+}
+
+.pacing .label {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8a6d3b;
+    margin-right: 2mm;
+}
+
+.pacing .note {
+    font-size: 9.5pt;
+}
+
+.card {
+    border: 1.5px solid #d8c9ae;
+    border-radius: 2.5mm;
+    padding: 3mm 4mm;
+    margin: 0 0 3.5mm;
+    break-inside: avoid;
+    background: #fffdf8;
+}
+
+.card.soft {
+    background: #f6efe2;
+    border-color: #e0d2b4;
+}
+
+.checks {
+    list-style: none;
+    padding: 0;
+    margin: 1.5mm 0 3mm;
+}
+
+.checks li {
+    position: relative;
+    padding: 1.6mm 0 1.6mm 8mm;
+    break-inside: avoid;
+}
+
+.checks li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.1mm;
+    width: 3.6mm;
+    height: 3.6mm;
+    border: 1.4px solid #7a5a2e;
+    border-radius: 1mm;
+    background: #ffffff;
+}
+
+.checks .sub {
+    color: #6b5d4b;
+    font-size: 9pt;
+}
+
+.rules {
+    list-style: none;
+    padding: 0;
+    margin: 1.5mm 0 3mm;
+    counter-reset: rule;
+}
+
+.rules li {
+    counter-increment: rule;
+    position: relative;
+    padding: 2.2mm 0 2.2mm 11mm;
+    break-inside: avoid;
+    border-bottom: 0.5px dotted #d8c9ae;
+}
+
+.rules li:last-child {
+    border-bottom: none;
+}
+
+.rules li::before {
+    content: counter(rule);
+    position: absolute;
+    left: 0;
+    top: 1.8mm;
+    width: 7.5mm;
+    height: 7.5mm;
+    border-radius: 50%;
+    background: #6b8e5a;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: center;
+    line-height: 7.5mm;
+}
+
+table.sheet {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5mm 0 4mm;
+    font-size: 9pt;
+}
+
+table.sheet th {
+    background: #6b8e5a;
+    color: #ffffff;
+    text-align: left;
+    padding: 1.8mm 2.5mm;
+    font-size: 8.5pt;
+}
+
+table.sheet td {
+    border: 0.8px solid #cfc2ab;
+    padding: 1.8mm 2.5mm;
+}
+
+table.sheet tr:nth-child(even) td {
+    background: #f8f4ea;
+}
+
+.writein {
+    display: inline-block;
+    min-width: 60mm;
+    border-bottom: 1.2px dotted #8a7a63;
+    height: 5mm;
+    vertical-align: bottom;
+}
+
+.writein.short {
+    min-width: 22mm;
+}
+
+.writein.wide {
+    min-width: 115mm;
+}
+
+.writeblock {
+    padding: 1.5mm 0 1mm 0;
+}
+
+.tally {
+    display: inline-block;
+    width: 26mm;
+    height: 9mm;
+    border: 1.4px solid #7a5a2e;
+    border-radius: 1.5mm;
+    background: #ffffff;
+    vertical-align: middle;
+}
+
+.tallies {
+    margin: 1.5mm 0 3mm;
+}
+
+.tallies .row {
+    padding: 1.3mm 0;
+    break-inside: avoid;
+}
+
+.tallies .row .num {
+    display: inline-block;
+    width: 14mm;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 2mm;
+}
+
+.meter {
+    display: table;
+    width: 100%;
+    border-spacing: 2mm 0;
+    margin: 2mm 0 3mm;
+}
+
+.meter .step {
+    display: table-cell;
+    width: 20%;
+    vertical-align: top;
+}
+
+.meter .box {
+    width: 100%;
+    height: 10mm;
+    border: 1.4px solid #7a5a2e;
+    border-radius: 1.5mm;
+    background: #ffffff;
+}
+
+.meter .face {
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+    margin-bottom: 1mm;
+}
+
+.meter .cap {
+    font-size: 7.5pt;
+    color: #6b5d4b;
+    text-align: center;
+}
+
+.hint {
+    font-size: 8.5pt;
+    color: #6b5d4b;
+    font-style: italic;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid #6b8e5a;
+    color: #46634a;
+    border-radius: 5mm;
+    padding: 0.4mm 2.8mm;
+    font-size: 8pt;
+    font-weight: bold;
+    margin-right: 1.5mm;
+}
+
+.cols2 {
+    column-count: 2;
+    column-gap: 8mm;
+}
+
+.cols2 .card {
+    break-inside: avoid;
+}
+
+.done-note {
+    margin-top: 6mm;
+    padding: 3mm 4mm;
+    background: #eef3e9;
+    border: 1.5px solid #bcd3ae;
+    border-radius: 2mm;
+    font-size: 9.5pt;
+    break-inside: avoid;
+}
+
+.done-note .label {
+    font-weight: bold;
+    color: #46634a;
+}
+
+hr.soft {
+    border: none;
+    border-top: 0.8px dotted #b7a98d;
+    margin: 4mm 0;
+}
